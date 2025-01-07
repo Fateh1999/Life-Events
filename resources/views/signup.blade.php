@@ -45,11 +45,19 @@
                 <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" placeholder="Create a password" required>
             </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirm_password" placeholder="Confirm password" required>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">User Image</label>
+                <input type="file" class="form-control" id="image" placeholder="User Image" required>
+            </div>
             <div class="text-center">
                 <button type="submit" class="btn btn-primary w-100">Sign Up</button>
             </div>
             <div class="text-center mt-3">
-                <p>Already have an account? <a href="login.html">Sign In</a></p>
+                <p>Already have an account? <a href="/login">Sign In</a></p>
             </div>
         </form>
     </div>
