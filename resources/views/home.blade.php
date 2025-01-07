@@ -23,6 +23,9 @@
                     <li class="nav-item">
                         <button class="btn btn-primary btn-sm ms-3" id="addPhotoBtn">Add Photo</button>
                     </li>
+                    <li class="nav-item">
+                        <a class="btn btn-danger btn-sm ms-3" href="/login">Sign Out</a>
+                    </li>
                 </ul>
             </div>
         </div>

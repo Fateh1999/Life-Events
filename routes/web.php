@@ -1,10 +1,15 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UseCotroller;
 
 // PAGE FOR FORM SIGNUP
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [UserController::class, 'home'])
+        ->name('home.page');
+
+Route::get('/login', [UserController::class, 'login'])
+        ->name('login.page');
+
+Route::get('/signup', [UserController::class, 'signup'])
+        ->name('signup.page');
 
