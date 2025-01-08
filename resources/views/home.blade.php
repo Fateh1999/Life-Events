@@ -4,7 +4,7 @@
  <!-- Add Event Section -->
     <div id="add-event-section" class="container">
         <h2 class="text-center mb-4">Add a Life Event</h2>
-        <form method="POST" action="/add_event" id="eventForm" class="row g-3">
+        <form method="POST" action="{{ url('/add_event') }}" id="eventForm" class="row g-3">
             @csrf
             <div class="col-md-6">
                 <label for="eventName" class="form-label">Event Name</label>
@@ -36,7 +36,7 @@
         </div>
     </div>
 
-      <!-- JavaScript -->
+      {{-- <!-- JavaScript -->
     <script>
         const addPhotoBtn = document.getElementById('addPhotoBtn');
         const addEventSection = document.getElementById('add-event-section');
@@ -99,7 +99,7 @@
             gallerySection.style.display = 'block';
             addPhotoBtn.innerText = 'Add Photo';
         });
-    </script>
+    </script> --}}
 
 @endsection
  

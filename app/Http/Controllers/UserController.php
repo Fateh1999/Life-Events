@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Event;
+use App\Models\Events;
 
 class UserController extends Controller
 {
     public function home(){
         return view('home');
     }
-    public function add_event(Request $request){
+    public function addEvent(Request $request){
+        // dd($request);
         $request->validate([
             'eventName' => 'required',
             'eventDate' => 'required',
@@ -19,14 +20,11 @@ class UserController extends Controller
         ]);
 
         //upload event
-        $eventImage = time().'.'.$request->eventImage->extension();
-        $request->eventImage->move(public_path('gallery'), $eventImage);
-
-        $event = new Event;
+        $event = new Events;
         $event->eventName = $request->eventName;
         $event->eventDate = $request->eventDate;
         $event->eventDescription = $request->eventDescription;
-        $event->eventImage = $eventImage;
+        $event->eventImage = $request->eventImage;
         $event->save();
 
         return redirect()->route('home.page');

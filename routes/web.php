@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [UserController::class, 'home'])
         ->name('home.page');
 
-Route::get('/add_event', [UserController::class, 'add_event'])
+Route::post('/add_event', [UserController::class, 'addEvent'])
         ->name('add_event.page');
 
 Route::get('/login', [UserController::class, 'login'])
@@ -16,3 +16,12 @@ Route::get('/login', [UserController::class, 'login'])
 Route::get('/signup', [UserController::class, 'signup'])
         ->name('signup.page');
 
+
+        // Schema::create('gallery', function (Blueprint $table) {
+        //         $table->id();
+        //         $table->string('eventName');
+        //         $table->string('eventDate');
+        //         $table->string('eventDescription');
+        //         $table->string('eventImage');
+        //         $table->timestamps();
+        //     });
