@@ -27,7 +27,7 @@ class UserController extends Controller
         $event->eventImage = $request->eventImage;
         $event->save();
 
-        return redirect()->route('home.page');
+        return redirect()->route ('home.page')->withSuccess('Successfully created');
     }
     public function login(){
         return view('login');
