@@ -15,13 +15,3 @@ Route::get('/login', [UserController::class, 'login'])
 
 Route::get('/signup', [UserController::class, 'signup'])
         ->name('signup.page');
-
-
-        // Schema::create('gallery', function (Blueprint $table) {
-        //         $table->id();
-        //         $table->string('eventName');
-        //         $table->string('eventDate');
-        //         $table->string('eventDescription');
-        //         $table->string('eventImage');
-        //         $table->timestamps();
-        //     });

@@ -16,7 +16,7 @@ class UserController extends Controller
             'eventName' => 'required',
             'eventDate' => 'required',
             'eventDescription' => 'required',
-            'eventImage' => 'required',
+            'eventImage' => 'required'
         ]);
 
         //upload event
